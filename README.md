@@ -17,7 +17,7 @@ Requires Go 1.20+.
 | Variable / flag | Meaning |
 |---|---|
 | `LILIUM_HOST` / `--host` | ToolBear origin (default `https://lilium.chat`) |
-| `LILIUM_CLIENT_ID` / `--client-id` | Official public OIDC client UUID (required until embedded after seed) |
+| `LILIUM_CLIENT_ID` / `--client-id` | Override official public OIDC client UUID (default embedded) |
 | `LILIUM_CONFIG_DIR` | Override credentials directory (default `~/.config/lilium`) |
 | `LILIUM_CALLBACK_PORT` / `--callback-port` | Force loopback port (`3847`/`3848` tried by default) |
 
@@ -26,9 +26,9 @@ Credentials are stored at `~/.config/lilium/credentials.json` with mode `0600`. 
 ## Auth
 
 ```bash
-export LILIUM_CLIENT_ID="<seeded-uuid>"
-# optional staging:
+# optional staging overrides:
 # export LILIUM_HOST="https://staging.example"
+# export LILIUM_CLIENT_ID="<staging-uuid>"
 
 lilium auth login            # desktop → browser loopback+PKCE; SSH → device code
 lilium auth login --web      # force loopback
@@ -68,4 +68,5 @@ Gift/poll/lottery/land/pal: use `lilium api` (no dedicated subcommands in V1).
 
 ## Official client seed
 
-See `dzmm_archive` ops doc `docs/ops/lilium-cli-client.md`. After seeding, embed the same UUID as `internal/config.DefaultClientID` (or keep using `LILIUM_CLIENT_ID`).
+See `dzmm_archive` ops doc `docs/ops/lilium-cli-client.md`. Production client id is
+embedded as `internal/config.DefaultClientID` (`589ed8c1-443f-4c13-ae4b-4891fb93de93`).

@@ -12,8 +12,8 @@ import (
 const DefaultHost = "https://lilium.chat"
 
 // DefaultClientID is the official public OIDC client UUID.
-// Replace after seeding; override with LILIUM_CLIENT_ID for staging.
-const DefaultClientID = ""
+// Override with LILIUM_CLIENT_ID for staging.
+const DefaultClientID = "589ed8c1-443f-4c13-ae4b-4891fb93de93"
 
 // DefaultCallbackPorts are tried in order for loopback PKCE.
 var DefaultCallbackPorts = []int{3847, 3848}
