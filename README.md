@@ -5,12 +5,18 @@
 ## Install
 
 ```bash
+# Nix
+nix build
+nix run . -- --help
+nix profile install .
+
+# Go
 go install github.com/lilium-toolbear/lilium-cli/cmd/lilium@latest
 # or from a checkout:
 go build -o lilium ./cmd/lilium
 ```
 
-Requires Go 1.20+.
+Requires Go 1.20+ (or Nix).
 
 ## Configuration
 
