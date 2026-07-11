@@ -71,8 +71,3 @@ lilium wallet balance
 | `lilium turnip inventory\|farm\|buy\|sell` | `/api/turnip/...` |
 
 Gift/poll/lottery/land/pal: use `lilium api` (no dedicated subcommands in V1).
-
-## Official client seed
-
-See `dzmm_archive` ops doc `docs/ops/lilium-cli-client.md`. Production client id is
-embedded as `internal/config.DefaultClientID` (`589ed8c1-443f-4c13-ae4b-4891fb93de93`).
