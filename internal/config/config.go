@@ -9,7 +9,7 @@ import (
 
 // DefaultHost is the production Lilium / ToolBear origin.
 // Override with --host or LILIUM_HOST for staging.
-const DefaultHost = "https://lilium.chat"
+const DefaultHost = "https://lilium.kuma.homes"
 
 // DefaultClientID is the official public OIDC client UUID.
 // Override with LILIUM_CLIENT_ID for staging.

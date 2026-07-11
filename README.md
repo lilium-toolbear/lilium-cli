@@ -22,7 +22,7 @@ Requires Go 1.20+ (or Nix).
 
 | Variable / flag | Meaning |
 |---|---|
-| `LILIUM_HOST` / `--host` | ToolBear origin (default `https://lilium.chat`) |
+| `LILIUM_HOST` / `--host` | ToolBear origin (default `https://lilium.kuma.homes`) |
 | `LILIUM_CLIENT_ID` / `--client-id` | Override official public OIDC client UUID (default embedded) |
 | `LILIUM_CONFIG_DIR` | Override credentials directory (default `~/.config/lilium`) |
 | `LILIUM_CALLBACK_PORT` / `--callback-port` | Force loopback port (`3847`/`3848` tried by default) |
